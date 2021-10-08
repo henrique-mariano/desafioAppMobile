@@ -3,6 +3,11 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 
+/**
+ * Componente que renderiza a página de transações do aplicativo.
+ * @param {any} {navigation} - Componente de navegação para redirecionar as telas da aplicação. 
+ * @returns {View} Página de transação.
+ */
 export default function TransactionScreen({ navigation }) {
   return (
     <View style={styles.container}>

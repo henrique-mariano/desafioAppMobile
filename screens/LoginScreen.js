@@ -8,18 +8,21 @@ import {
   Pressable,
 } from "react-native";
 
-export default function HomeScreen({ navigation }) {
+/**
+ * Componente que renderiza a página de login do aplicativo.
+ * @param {any} {navigation} - Componente de navegação para redirecionar as telas da aplicação. 
+ * @returns {View} Página de login.
+ */
+export default function LoginScreen({ navigation }) {
   return (
     <View style={styles.container}>
-      <Home navigation={navigation} />
+      <Login navigation={navigation} />
     </View>
   );
 }
 
-const Home = ({ navigation }) => {
-  /**
-   * Valores dos inputs.
-   */
+const Login = ({ navigation }) => {
+  /** Estados dos inputs. */
   const [valueEmail, onChangeEmail] = React.useState("");
   const [valueSenha, onChangeSenha] = React.useState("");
 

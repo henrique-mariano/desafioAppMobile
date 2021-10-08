@@ -9,9 +9,10 @@ import {
 } from "react-native";
 
 /**
- * Componente de cadastro
- * Recebe: Componente de navegação para redirecionar para outra tela após o cadastro.
- * */
+ * Componente que renderiza a página de cadastro do aplicativo.
+ * @param {any} {navigation} - Componente de navegação para redirecionar as telas da aplicação. 
+ * @returns {View} Página de cadastro.
+ */
 export default function SigninScreen({ navigation }) {
   return (
     <View style={styles.container}>
@@ -22,7 +23,7 @@ export default function SigninScreen({ navigation }) {
 
 const Signin = ({ navigation }) => {
   /**
-   * Valores dos inputs.
+   * Estados dos inputs.
    */
   const [valueNome, onChangeNome] = React.useState("");
   const [valueEmail, onChangeEmail] = React.useState("");
@@ -46,18 +47,12 @@ const Signin = ({ navigation }) => {
       >
         MeuBalanço
       </Text>
-      {/**
-       * Input de nome
-       */}
       <TextInput
         style={[styles.inputBox, { top: 210 }]}
         onChangeText={(text) => onChangeNome(text)}
         value={valueNome}
         placeholder="  Nome"
       />
-      {/**
-       * Input de email
-       */}
       <TextInput
         style={[styles.inputBox, { top: 220 }]}
         textContentType="emailAddress"
@@ -66,9 +61,6 @@ const Signin = ({ navigation }) => {
         value={valueEmail}
         placeholder="  E-mail"
       />
-      {/**
-       * Input de senha
-       */}
       <TextInput
         style={[styles.inputBox, { top: 230 }]}
         secureTextEntry={true}
@@ -77,9 +69,6 @@ const Signin = ({ navigation }) => {
         value={valueSenha}
         placeholder="  Senha"
       />
-      {/**
-       * Input de confirmação de senha
-       */}
       <TextInput
         style={[styles.inputBox, { top: 240 }]}
         secureTextEntry={true}
