@@ -1,21 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { render } from "react-dom";
+import { StyleSheet, Text, View } from "react-native";
+import { useFonts, Ruluko_400Regular } from "@expo-google-fonts/ruluko";
+import AppNavigate from "./components/AppNavigate";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  let [fontsLoaded] = useFonts({
+    Ruluko_400Regular,
+  });
+  if (!fontsLoaded) {
+    return <View></View>;
+  }
+  return <AppNavigate />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
