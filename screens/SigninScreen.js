@@ -49,6 +49,7 @@ const Signin = ({ navigation }) => {
       </Text>
       <TextInput
         style={[styles.inputBox, { top: 210 }]}
+        textContentType="name"
         onChangeText={(text) => onChangeNome(text)}
         value={valueNome}
         placeholder="  Nome"

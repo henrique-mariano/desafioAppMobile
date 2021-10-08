@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TransactionScreen from "../screens/TransactionScreen";
 import SigninScreen from "../screens/SigninScreen";
 import LoginScreen from "../screens/LoginScreen";
+import NewEntryScreen from "../screens/NewEntryScreen";
+import NewExitScreen from "../screens/NewExitScreen";
 /**
  * Pilha de navegação da aplicação.
  */
@@ -20,6 +22,8 @@ export default function AppNavigate() {
         <Stack.Screen name="Início" component={LoginScreen} />
         <Stack.Screen name="Balanço" component={TransactionScreen} />
         <Stack.Screen name="Cadastro" component={SigninScreen} />
+        <Stack.Screen name="Entrada" component={NewEntryScreen} />
+        <Stack.Screen name="Saída" component={NewExitScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

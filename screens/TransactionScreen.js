@@ -5,7 +5,7 @@ import { FontAwesome } from "@expo/vector-icons";
 
 /**
  * Componente que renderiza a página de transações do aplicativo.
- * @param {any} {navigation} - Componente de navegação para redirecionar as telas da aplicação. 
+ * @param {any} {navigation} - Componente de navegação para redirecionar as telas da aplicação.
  * @returns {View} Página de transação.
  */
 export default function TransactionScreen({ navigation }) {
@@ -40,7 +40,7 @@ const Transaction = ({ navigation }) => {
         }}
       >
         <Text style={{ color: "gray", fontSize: 20, top: 215, left: 75 }}>
-          Não há registros de{"\n"}  entrada ou saída
+          Não há registros de{"\n"} entrada ou saída
         </Text>
         <Pressable
           style={{
@@ -50,6 +50,7 @@ const Transaction = ({ navigation }) => {
             width: 155,
             borderRadius: 5,
           }}
+          onPress={() => navigation.navigate("Entrada")}
         >
           <View style={{ left: 10, top: 10 }}>
             <AntDesign name="pluscircleo" size={24} color="#fff" />
@@ -67,6 +68,7 @@ const Transaction = ({ navigation }) => {
             borderRadius: 5,
             left: 170,
           }}
+          onPress={() => navigation.navigate("Saída")}
         >
           <View style={{ left: 10, top: 10 }}>
             <AntDesign name="minuscircleo" size={24} color="#fff" />
